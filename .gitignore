@@ -1,0 +1,104 @@
+# =========================================
+# Terraform
+# =========================================
+
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files may contain secrets
+*.tfvars
+!terraform/environments/dev.tfvars
+*.tfvars.json
+
+# Keep the example configuration
+!terraform/environments/*.example.tfvars
+
+# =========================================
+# Azure / Databricks authentication
+# =========================================
+
+.databrickscfg
+.databricks/
+.azure/
+.azureclirc
+
+# Environment files containing credentials
+.env
+.env.*
+!.env.example
+
+
+# =========================================
+# Databricks
+# =========================================
+
+.databricks/bundle/
+
+
+# =========================================
+# Python
+# =========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+
+
+# =========================================
+# Jupyter
+# =========================================
+
+.ipynb_checkpoints/
+
+
+# =========================================
+# VS Code
+# =========================================
+
+.vscode/
+
+
+# =========================================
+# Operating system
+# =========================================
+
+.DS_Store
+Thumbs.db
+
+
+# =========================================
+# Logs
+# =========================================
+
+*.log
+
+
+# =========================================
+# Local data files
+# =========================================
+
+# Ignore local CSV/data files unless intentionally committed
+data/*.csv
+
+
+# =========================================
+# Secrets / certificates / keys
+# =========================================
+
+*.pem
+*.key
+*.pfx
+*.p12
+*.crt
+*.cer
+dev-state-recovery-backup.tfstate
+test-state-before-cleanup.tfstate
