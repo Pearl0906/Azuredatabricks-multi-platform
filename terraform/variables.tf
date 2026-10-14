@@ -309,3 +309,13 @@ variable "platform_admin_principal" {
   description = "Databricks principal used for platform administration."
   type        = string
 }
+
+variable "key_vault_name" {
+  description = "Name of the environment's Key Vault."
+  type        = string
+}
+
+variable "tenant_id" {
+  description = "Microsoft Entra ID tenant ID."
+  type        = string
+}

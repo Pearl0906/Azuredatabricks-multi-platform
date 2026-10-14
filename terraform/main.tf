@@ -193,3 +193,19 @@ module "databricks_job_permissions" {
   permission_level = var.databricks_job_permission_level
 
 }
+
+
+module "key_vault" {
+  source = "./modules/key_vault"
+
+  name                = var.key_vault_name
+  resource_group_name = module.resource_group.name
+  location            = module.resource_group.location
+  tenant_id           = var.tenant_id
+
+  sku_name                   = "standard"
+  soft_delete_retention_days = 90
+  purge_protection_enabled   = true
+
+  tags = var.tags
+}
